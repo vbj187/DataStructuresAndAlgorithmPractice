@@ -6,22 +6,22 @@
 
 // SLIDING WINDOW METHOD
 
-const maxSubarraySum = (arr, sum) => {
-    if (arr.length < sum) {
+const maxSubarraySum = (arr, num) => {
+    if (arr.length < num) {
         return null;
     }
 
     let temp = 0;
     let max = 0;
 
-    for (let i = 0; i < sum; i++) {
+    for (let i = 0; i < num; i++) {
         max += arr[i];
     }
 
     temp = max;
 
-    for (let j = sum; j < arr.length; j++) {
-        temp = temp - arr[j - sum] + arr[j];
+    for (let j = num; j < arr.length; j++) {
+        temp = temp - arr[j - num] + arr[j];
         max = Math.max(temp, max);
     }
     return max;
