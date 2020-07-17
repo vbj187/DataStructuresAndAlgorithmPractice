@@ -39,6 +39,7 @@ const averagePair = (arr, ave) => {
     return false;
 };
 
+
 console.log(averagePair([1, 2, 3], 2.5));
 // True
 console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8));

@@ -21,6 +21,7 @@ function maxSubarraySum(arr, n) {
             max = temp;
         }
     }
+    return max;
 }
 
 // [4, 2, 1, 6, 2], 2 --- 8
@@ -28,7 +29,7 @@ function maxSubarraySum(arr, n) {
 function maxSubarraySumSliderWindow(arr, num) {
 
     if (arr.length < num) {
-        return;
+        return null;
     }
 
     let temp = 0;
@@ -51,5 +52,9 @@ function maxSubarraySumSliderWindow(arr, num) {
     return max;
 
 }
+
+// console.log(maxSubarraySum([4, 2, 1, 6, 2], 2));
+
+// console.log(maxSubarraySumSliderWindow([4, 2, 1, 6, 2], 2));;
 
 // 'hellothere' 

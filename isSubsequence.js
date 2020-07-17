@@ -23,6 +23,28 @@
 
 const isSubsequence = (strOne, strTwo) => {
 
+    let pointerOne = 0;                             // i
+    let pointerTwo = 0;                             // j
+
+    while (pointerTwo < strTwo.length) {
+        if (strOne[pointerOne] === strTwo[pointerTwo]) {
+            pointerOne++;
+            pointerTwo++;
+        } else if (strOne[pointerOne] !== strTwo[pointerTwo]) {
+            pointerTwo++;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
 };
 
-isSubsequence('hello', 'hello world');
+console.log(isSubsequence('hello', 'hello world'));
+// >> true
+console.log(isSubsequence('sing', 'sting'));
+// >> true
+console.log(isSubsequence('abc', 'abracadabra'));
+//  >> true
+console.log(isSubsequence('abc', 'acb'));
+//  >> false;
