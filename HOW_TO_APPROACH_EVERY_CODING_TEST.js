@@ -52,4 +52,9 @@ function alphaNumric(char) {
 
 
 
+// How to find if the method
+// >>> Pairs--- Two pointer
+// >>> Portions--- Sliding Window
+
+
 
