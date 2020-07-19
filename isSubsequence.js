@@ -26,18 +26,19 @@ const isSubsequence = (strOne, strTwo) => {
     let pointerOne = 0;                             // i
     let pointerTwo = 0;                             // j
 
+    let count = strOne.length;
+
     while (pointerTwo < strTwo.length) {
         if (strOne[pointerOne] === strTwo[pointerTwo]) {
             pointerOne++;
             pointerTwo++;
-        } else if (strOne[pointerOne] !== strTwo[pointerTwo]) {
-            pointerTwo++;
+            count--;
         } else {
-            return false;
+            pointerTwo++;
         }
     }
 
-    return true;
+    return count === 0 ? true : false;
 };
 
 console.log(isSubsequence('hello', 'hello world'));

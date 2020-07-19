@@ -24,6 +24,7 @@ const maxSubarraySum = (arr, num) => {
         temp = temp - arr[j - num] + arr[j];
         max = Math.max(temp, max);
     }
+
     return max;
 };
 
