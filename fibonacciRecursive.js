@@ -1,5 +1,7 @@
 const fibonacciRecursive = (num) => {
     if (num <= 2) return 1;
 
-    return fib(num - 1) + fib(num - 2);
-}
+    return fibonacciRecursive(num - 1) + fibonacciRecursive(num - 2);
+};
+
+console.log(fibonacciRecursive(7));
